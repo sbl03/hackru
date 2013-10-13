@@ -122,7 +122,7 @@ $(document).ready(function() {
 										}).done(function(data5) {
 											if(data5.objects.length > 0) {
 												var this_bill = data4.objects[0].related_bill;
-												$('#bills-list').append('<li><div class="bill_upper"><a href="' + this_bill.link + '">' + this_bill.title_without_number + '</a><span class="bill_vote">' + parseKey(data5.objects[0].option.key) + '</span></div><div class="bill_lower"><span class="bill_date">' + this_bill.current_status_date + '</span></li>');
+												$('#bills-list').append('<li><div class="bill_upper"><a href="' + this_bill.link + '">' + this_bill.title_without_number + '</a><span class="bill_vote">' + parseKey(data5.objects[0].option.key) + '</span></div><div class="bill_lower"><span class="bill_date">' + this_bill.current_status_date + '</span></li>').fadeIn();
 												//$('.preloader-custom').slideUp();
 											}
 										});
