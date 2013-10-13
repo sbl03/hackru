@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import url(http://fonts.googleapis.com/css?family=Petit+Formal+Script);
 
 /* TAGS */
 h1 {
@@ -18,6 +19,20 @@ hr {
 .fit-to-container {
 	max-width: 63.5em;	
 }
+.preloader-custom {
+	width: 100%;
+	height: 96px;
+	position: relative;
+	background-image: url(../img/spinner_96.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.Democrat {
+	color: #03C;	
+}
+.Republican {
+	color: #C00;	
+}
 
 /* MAIN */
 .hero-unit {
@@ -32,9 +47,37 @@ hr {
 		font-size: 3em;
 		display: inline-block;
 		width: auto;
+		margin: 0;
 	}
 	
 /* SINGLE */
+.yay,
+.nay,
+.neutral {
+	font-size: 4em;	
+	line-height: 1em;
+}
+	.yay {
+		color: #0F3;	
+	}
+	.nay {
+		color: #C33;	
+	}
+	.neutral {
+		color: #aaa;	
+	}
+
+#profile-container {
+	width: 100%;
+	border: none;	
+}
+	#profile-container td {
+		vertical-align: top;	
+	}
+	/*#profile-container td:last-child {
+		width: 100%;	
+	}*/
+
 #profile-img {
 	display: inline-block;
 }
@@ -43,8 +86,28 @@ hr {
 	display: inline-block;
 	padding-left: 20px;
 }
-	#profile-desc h1 {
-		font-family: "Sanchez", serif;	
+	#profile-desc #profile-name {}
+		#profile-name h1 {
+			font-family: "Sanchez", serif;
+			display: inline-block;
+		}
+			#profile-name h1 a {
+				color: #000 !important;
+				text-decoration: underline;	
+			}
+		#profile-name .party {
+			text-transform: uppercase;
+			margin-left: 10px;
+		}
+	#profile-desc #role {
+		font-style: italic;
+		color: #666;
+		font-size: 1.4em;
+	}
+	#profile-desc #enddate {
+		color: #aaa;
+		font-style: italic;
+		margin-top: 5px;
 	}
 
 #topic-list { }
@@ -59,9 +122,6 @@ hr {
 			padding: 30px;
 			margin: 15px 0;
 		}
-			#bills-list li * {
-				width: 100%;
-			}
 			#bills-list li:nth-child(even) {
 				background-color: #eee;
 			}

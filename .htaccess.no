@@ -1,0 +1,22 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+#if looping, cancel (not preferred way)
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule ^ - [L]
+
+#remove trailing slash
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+#redirect members/builds links
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^person/(\w+)/(\w+)$ ./person.php?id=$1&topic=$2 [NC,L]
+
+#remove .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+ErrorDocument 404 /404.php
