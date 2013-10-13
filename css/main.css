@@ -6,9 +6,17 @@ h1 {
 	font-size: 3em;	
 }
 
+hr {
+	margin: 50px 0;
+	border: 3px solid #eee;	
+}
+
 /* CLASSES */
 .full {
 	width: 100%;
+}
+.fit-to-container {
+	max-width: 63.5em;	
 }
 
 /* MAIN */
@@ -25,3 +33,48 @@ h1 {
 		display: inline-block;
 		width: auto;
 	}
+	
+/* SINGLE */
+#profile-img {
+	display: inline-block;
+}
+
+#profile-desc {
+	display: inline-block;
+	padding-left: 20px;
+}
+	#profile-desc h1 {
+		font-family: "Sanchez", serif;	
+	}
+
+#topic-list { }
+	#topic-list h2 {
+		text-align: center;
+		font-family: "Sanchez", serif;
+	}
+	#topic-list #bills-list {
+		list-style: none;	
+	}
+		#bills-list li {
+			padding: 30px;
+			margin: 15px 0;
+		}
+			#bills-list li * {
+				width: 100%;
+			}
+			#bills-list li:nth-child(even) {
+				background-color: #eee;
+			}
+			.bill_upper {
+					
+			}
+				.bill_upper a {
+					font-size: 1.5em;	
+				}
+				.bill_upper .bill_vote {
+					float: right;	
+				}
+			.bill_lower {
+				font-size: 0.8em;
+				color: #888;
+			}
